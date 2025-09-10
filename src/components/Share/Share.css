@@ -2,6 +2,7 @@
   position: absolute;
   width: 100vw;
   height: 100vh;
+  height: 100svh;
   top: 0;
   left: 0;
   background: var(--overlay-color);
@@ -16,14 +17,11 @@
   width: min(95%, 40rem);
   box-shadow: var(--box-shadow-primary);
   background: var(--primary-color);
-  border-radius: 0.25rem;
+  border-radius: var(--border-radius);
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   gap: 1rem;
-  max-height: calc(100% - 1rem);
-  overflow: auto;
 }
 
 #close_btn {
@@ -47,11 +45,11 @@
   gap: 0.5rem;
 }
 .share_wrapper .image_wrapper span h1 {
-  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  font-size: var(--title-size);
 }
 .share_wrapper .image_wrapper span p {
   color: var(--gray-color);
-  font-size: clamp(0.85rem, 1vw, 0.95rem);
+  font-size: var(--p-size);
   line-height: 1.4;
 }
 
@@ -59,7 +57,7 @@
   height: 20rem;
   max-width: 15rem;
   object-fit: cover;
-  border-radius: 0.25rem;
+  border-radius: var(--border-radius);
 }
 
 .share_wrapper .btn_section {
@@ -70,7 +68,7 @@
 }
 .btn_section > button {
   padding: 0.5rem;
-  border-radius: 0.25rem;
+  border-radius: var(--border-radius);
   box-shadow: var(--box-shadow-primary);
   border: none;
   background: transparent;

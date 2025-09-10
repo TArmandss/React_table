@@ -16,10 +16,10 @@
   grid-template-columns: 3fr 0.5fr 0.5fr 1rem;
   padding: 1rem;
   gap: 1rem;
-  border-radius: 0.5rem;
 }
-.table_wrapper .header > div {
-  font-size: clamp(1rem, 1.3vw, 1.3rem);
+.table_wrapper .header div > h1 {
+  font-size: var(--title-size);
+  font-weight: 500;
 }
 
 .table_wrapper .item {
@@ -27,7 +27,7 @@
   grid-template-columns: 3fr 0.5fr 0.5fr 1rem;
   box-shadow: var(--box-shadow-primary);
   padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
+  border-radius: var(--border-radius);
   align-items: center;
   gap: 1rem;
   position: relative;
@@ -38,7 +38,7 @@
   height: clamp(4rem, 5vw, 5.5rem);
 
   object-fit: cover;
-  border-radius: 0.25rem;
+  border-radius: var(--border-radius);
 }
 .item .item_grid {
   display: grid;
@@ -54,12 +54,12 @@
 
 .item_grid div p {
   color: var(--gray-color);
-  font-size: clamp(0.85rem, 1vw, 0.95rem);
+  font-size: var(--p-size);
   width: min(95%, 20rem);
 }
 
 .item_grid div h1 {
-  font-size: clamp(1rem, 1vw, 1rem);
+  font-size: var(--h1-size);
   font-weight: 500;
 }
 
@@ -71,11 +71,11 @@
 
 #price {
   color: var(--green-color);
-  font-size: clamp(0.85rem, 1vw, 0.95rem);
+  font-size: var(--p-size);
 }
 #category {
   color: var(--secondary-color);
-  font-size: clamp(0.85rem, 1vw, 0.95rem);
+  font-size: var(--p-size);
 }
 
 /*Width is 600px or less */

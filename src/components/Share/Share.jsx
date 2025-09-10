@@ -3,17 +3,13 @@ import { X } from 'lucide-react';
 import { Facebook, Instagram, Copy } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { toast } from 'react-hot-toast';
-
-const itemAnmiation = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.2 } },
-};
+import { animation } from '../../../animations';
 
 function Share({ item, setShare, setDropdown }) {
   return (
     <div className="overlay">
       <motion.div
-        variants={itemAnmiation}
+        variants={animation}
         initial="hidden"
         animate="visible"
         exit="hidden"
@@ -29,7 +25,7 @@ function Share({ item, setShare, setDropdown }) {
         />
         <div className="image_wrapper">
           <div className="image_wrapper_left_col">
-            <img src={item.image_url} alt={item.name}/>
+            <img src={item.image_url} alt={item.name} />
           </div>
           <div className="image_wrapper_right_col">
             <span>

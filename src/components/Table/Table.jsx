@@ -6,15 +6,12 @@ import useWindowWidth from '../../hook/useWindowWidth.jsx';
 import Dropdown from '../Dropdown/Dropdown.jsx';
 import Share from '../Share/Share.jsx';
 import { motion, AnimatePresence } from 'framer-motion';
-
-const itemAnmiation = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-};
+import { animation } from '../../../animations.js';
 
 function Table() {
   const { data, loading } = useContext(DataContext);
   const windowWidth = useWindowWidth();
+  
   const [dropdown, setDropdown] = useState(null);
   const [share, setShare] = useState(false);
 
@@ -35,9 +32,15 @@ function Table() {
   return (
     <div className="table_wrapper">
       <div className="table_row header">
-        <div>Product {`(${data.length})`}</div>
-        <div>Category</div>
-        <div>Price</div>
+        <div>
+          <h1> Product {`(${data.length})`}</h1>
+        </div>
+        <div>
+          <h1>Category</h1>
+        </div>
+        <div>
+          <h1>Price</h1>
+        </div>
         <div></div>
       </div>
 
@@ -45,7 +48,7 @@ function Table() {
         data.map((item, index) => (
           <>
             <motion.div
-              variants={itemAnmiation}
+              variants={animation}
               initial="hidden"
               animate="visible"
               exit="hidden"
@@ -53,7 +56,7 @@ function Table() {
               key={item._id}
             >
               <div className="item_grid">
-                <img src={item.image_url} alt={item.name}/>
+                <img src={item.image_url} alt={item.name} />
                 <div>
                   <h1>{item.name}</h1>
 

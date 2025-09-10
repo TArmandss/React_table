@@ -1,8 +1,4 @@
-import {
-  createContext,
-  useState,
-  useEffect,
-} from 'react';
+import { createContext, useState, useEffect } from 'react';
 import axios from 'axios';
 export const DataContext = createContext();
 
@@ -12,7 +8,7 @@ export function DataProvider({ children }) {
 
   useEffect(() => {
     async function fetchData() {
-      setLoading(true)
+      setLoading(true);
       try {
         const response = await axios.get(`${import.meta.env.VITE_DATA_URL}`);
 
@@ -22,8 +18,6 @@ export function DataProvider({ children }) {
         }
       } catch (error) {
         console.error(error);
-      } finally {
-        setLoading(false);
       }
     }
 
@@ -31,7 +25,7 @@ export function DataProvider({ children }) {
   }, []);
 
   return (
-    <DataContext.Provider value={{ data, setData, loading}}>
+    <DataContext.Provider value={{ data, setData, loading }}>
       {children}
     </DataContext.Provider>
   );

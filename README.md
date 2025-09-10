@@ -1,6 +1,3 @@
-
-![Alt text](public\Snippet.png)
-
 # Install Dependencies
 
 npm install axios@^1.11.0 framer-motion@^12.23.12 lucide-react@^0.543.0 react@^19.1.1 react-dom@^19.1.1 react-hot-toast@^2.6.0
