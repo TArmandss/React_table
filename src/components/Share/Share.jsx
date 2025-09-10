@@ -1,0 +1,69 @@
+import './Share.css';
+import { X } from 'lucide-react';
+import { Facebook, Instagram, Copy } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { toast } from 'react-hot-toast';
+
+const itemAnmiation = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.2 } },
+};
+
+function Share({ item, setShare, setDropdown }) {
+  return (
+    <div className="overlay">
+      <motion.div
+        variants={itemAnmiation}
+        initial="hidden"
+        animate="visible"
+        exit="hidden"
+        className="share_wrapper"
+      >
+        <X
+          onClick={() => {
+            setShare(false);
+            setDropdown(false);
+          }}
+          id="close_btn"
+          width={20}
+        />
+        <div className="image_wrapper">
+          <div className="image_wrapper_left_col">
+            <img src={item.image_url} alt={item.name}/>
+          </div>
+          <div className="image_wrapper_right_col">
+            <span>
+              <h1>{item.name}</h1>
+              <p>{item.description}</p>
+              <h1>${item.price}</h1>
+            </span>
+            <div className="btn_section">
+              <button>
+                Share <Facebook strokeWidth={1.25} width={20} />
+              </button>
+              <button>
+                Share <Instagram strokeWidth={1.25} width={20} />
+              </button>
+              <button
+                onClick={() => {
+                  navigator.clipboard
+                    .writeText(item.url)
+                    .then(() => {
+                      toast.success('Successfully copied the link!');
+                    })
+                    .catch(() => {
+                      toast.error('Failed to copy the link!');
+                    });
+                }}
+              >
+                Copy link <Copy strokeWidth={1.25} width={20} />
+              </button>
+            </div>
+          </div>
+        </div>
+      </motion.div>
+    </div>
+  );
+}
+
+export default Share;
