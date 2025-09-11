@@ -1,14 +1,12 @@
 ### Items
-
-<img width="2560" height="1328" alt="Snippet1" src="https://github.com/user-attachments/assets/9fce1f39-21fc-4ef7-91c9-adea8a2cfea2" />
+<img width="2560" height="1328" alt="Snippet1" src="https://github.com/user-attachments/assets/c6301067-58dc-4096-b7a5-905256da3c8c" />
 
 ### Delete action
-
-<img width="2556" height="1322" alt="Snippet2" src="https://github.com/user-attachments/assets/04c3ef26-8746-4eff-99b7-0972d2daf34a" />
+<img width="2556" height="1322" alt="Snippet2" src="https://github.com/user-attachments/assets/c17d3db9-6ea3-4355-8284-b9be6198a30f" />
 
 ### Modal
+<img width="2560" height="1320" alt="Snippet3" src="https://github.com/user-attachments/assets/e84a9463-dc5f-4944-8f18-0d847b775b4d" />
 
-<img width="2560" height="1320" alt="Snippet3" src="https://github.com/user-attachments/assets/e63fad84-e276-4c35-9896-3f4e6e98f28c" />
 
 # Install Dependencies
 
