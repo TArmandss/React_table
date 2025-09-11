@@ -13,7 +13,7 @@ function Share({ item, setShare, setDropdown }) {
         initial="hidden"
         animate="visible"
         exit="hidden"
-        className="share_wrapper"
+        className="modal_wrapper"
       >
         <X
           onClick={() => {
@@ -23,11 +23,11 @@ function Share({ item, setShare, setDropdown }) {
           id="close_btn"
           width={20}
         />
-        <div className="image_wrapper">
-          <div className="image_wrapper_left_col">
+        <div className="modal">
+          <div className="modal_left_col">
             <img src={item.image_url} alt={item.name} />
           </div>
-          <div className="image_wrapper_right_col">
+          <div className="modal_right_col">
             <span>
               <h1>{item.name}</h1>
               <p>{item.description}</p>
